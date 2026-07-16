@@ -2,6 +2,10 @@
 
 A Simulink-based real-time controller that lets a split-belt instrumented treadmill match the walker's own speed instead of forcing the walker to match a fixed belt speed. The belt speed is driven by an estimate of the walker's center-of-mass (COM) position and velocity, so as the person drifts forward or backward on the deck, the treadmill accelerates or decelerates to bring them back to a target position.
 
+## Demo video
+
+[![Watch the demo](https://img.youtube.com/vi/66o-plEibsU/hqdefault.jpg)](https://www.youtube.com/watch?v=66o-plEibsU)
+
 The estimator fuses two sources: COM acceleration measured from the force plates and step-by-step position/velocity computed from heel-strike events, combined in a Kalman filter. A parallel motion-capture path provides an independent position/velocity estimate for validation.
 
 This repository contains the MATLAB Function block code extracted from the Simulink model, organized by the subsystem each block belongs to.
